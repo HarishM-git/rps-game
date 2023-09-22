@@ -1,0 +1,27 @@
+button{
+  border-radius:  15px;
+  padding: 100px; 
+  height: 30px;
+  margin: 15px;
+  font-weight: bolder;
+  text-align: center;
+  
+}
+.flex{
+  height: 250px;
+  border: 5px solid rgb(1, 0, 0);
+  border-radius: 15px;
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content:baseline;
+}
+@media screen and (min-width:412px){
+  .flex{
+      flex-direction: row;
+  }
+
+body{
+  background-color: black;
+}
