@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>game</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+  <div class="flex">
+      <div class="b1">
+      <button onclick="
+        const c=cmove();
+        result('stone');
+        ">stone</button>
+      
+      </div>
+      <div class="b2">
+      <button onclick="
+        const c=cmove();
+        result('paper');
+        ">paper</button>
+      
+    </div>
+    <div class="b3">
+      <button onclick="
+        const c=cmove();
+        result('scissor');
+        ">scissor</button>
+    </div>
+</div>
+  
+  <script>
+    function result(playerM){
+      const c=cmove();
+      let r=''
+      if (playerM==='stone')
+      {
+        if (c==='stone')
+        {
+          r='tie';
+        }
+        else if(c==='paper')
+        {
+          r='You lose';
+        }
+        else if(c==='scissor')
+        {
+          r='You Won';
+        }
+      
+        
+      }
+
+      else if(playerM==='paper')
+      {
+        if (c==='stone')
+        {
+          r='You Won';
+        }
+        else if(c==='paper')
+        {
+          r='tie';
+        }
+        else if(c==='scissor')
+        {
+          r='You Lose';
+        }
+        
+      }
+
+      else if(playerM==='scissor')
+      {
+        if(c==='scissor')
+        {
+          r='tie';
+        }
+        else if(c==='paper')
+        {
+          r='You Won';
+        }
+        else if(c==='stone')
+        {
+          r='You Lose';
+        }
+        
+      }
+      alert(`computer selected ${c} and you selected ${playerM} .${r}`);
+    }
+    
+    
+  
+
+    function cmove(){
+      const random=Math.random();
+      let cm='';
+      if(random>0 && random <1/3)
+      {
+        cm='stone';
+      }
+      else if(random>1/3 && random<2/3)
+      {
+        cm='paper';
+      }
+      else if(random>2/3 && random<1)
+      {
+        cm='scissor';
+      }
+      return cm;
+    }
+    
+    
+  </script>
+
+</body>
+
+</html>
