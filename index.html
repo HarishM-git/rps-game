@@ -21,16 +21,32 @@
         result('paper');
         ">paper</button>
       
-    </div>
-    <div class="b3">
+      </div>
+      <div class="b3">
       <button onclick="
         const c=cmove();
         result('scissor');
         ">scissor</button>
-    </div>
+      </div>
+      <div class="b4">
+      <button onclick="
+        score.wins=0,
+        score.loses=0,
+        score.ties=0">
+      reset score</button>
+      </div>
+      
 </div>
   
   <script>
+    const score={
+      wins:0,
+      loses:0,
+      ties:0
+
+    };
+
+
     function result(playerM){
       const c=cmove();
       let r=''
@@ -38,15 +54,15 @@
       {
         if (c==='stone')
         {
-          r='tie';
+          r='TIE';
         }
         else if(c==='paper')
         {
-          r='You lose';
+          r='YOU LOSE';
         }
         else if(c==='scissor')
         {
-          r='You Won';
+          r='YOU WON';
         }
       
         
@@ -56,15 +72,15 @@
       {
         if (c==='stone')
         {
-          r='You Won';
+          r='YOU WON';
         }
         else if(c==='paper')
         {
-          r='tie';
+          r='TIE';
         }
         else if(c==='scissor')
         {
-          r='You Lose';
+          r='YOU LOSE';
         }
         
       }
@@ -73,20 +89,31 @@
       {
         if(c==='scissor')
         {
-          r='tie';
+          r='TIE';
         }
         else if(c==='paper')
         {
-          r='You Won';
+          r='YOU WON';
         }
         else if(c==='stone')
         {
-          r='You Lose';
+          r='YOU LOSE';
         }
         
       }
-      alert(`computer selected ${c} and you selected ${playerM} .${r}`);
+    if (r==='YOU WON'){
+      score.wins+=1;
+
     }
+    else if(r==='YOU LOSE'){
+      score.loses+=1;
+    }
+    else if(r==='TIE'){
+      score.ties+=1;
+    }
+    alert(`computer selected ${c} and you selected ${playerM} .${r}
+WINS:${score.wins} LOSES:${score.loses} TIE:${score.ties}`);
+  }
     
     
   
