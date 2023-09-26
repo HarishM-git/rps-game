@@ -1,7 +1,6 @@
 button{
   border-radius:  15px;
-  padding: 100px; 
-  height: 30px;
+  padding: 50px; 
   margin: 15px;
   font-weight: bolder;
   text-align: center;
@@ -17,10 +16,10 @@ button{
   justify-content:center;
   align-content:baseline;
 }
-@media screen and (min-width:412px){
-  .flex{
-      flex-direction: row;
-  }
+
+.flex{
+  flex-direction: row;
+}
 
 body{
   background-color: black;

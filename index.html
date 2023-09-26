@@ -30,9 +30,10 @@
       </div>
       <div class="b4">
       <button onclick="
-        score.wins=0,
-        score.loses=0,
-        score.ties=0">
+        score.wins=0;
+        score.loses=0;
+        score.ties=0;
+        alert('YOUR SCORE HAS BEEN RESETED')">
       reset score</button>
       </div>
       
@@ -112,7 +113,7 @@
       score.ties+=1;
     }
     alert(`computer selected ${c} and you selected ${playerM} .${r}
-WINS:${score.wins}    LOSES:${score.loses}    TIE:${score.ties}`);
+WINS : ${score.wins}          LOSES : ${score.loses}          TIE : ${score.ties}`);
   }
     
     
