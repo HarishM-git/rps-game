@@ -10,9 +10,8 @@
   <div class="flex">
 
       <div class="b1">
-      <img src="stone.png" alt="this img is about paper"
+      <img src="stone.png" alt="this img is about stone"
       onclick="
-        cmove();
         result('stone');
         ">
       
@@ -20,14 +19,12 @@
       <div class="b2">
       <img src="paper.png" alt="this img is about paper"
       onclick="
-        cmove();
         result('paper');
         ">
       
       </div>
       <div class="b3">
       <img src="scissor.png" alt="this img is about scissor" onclick="
-        cmove();
         result('scissor');
         ">
 
@@ -54,7 +51,7 @@
 
 
     function result(playerM){
-      const c=cmove();
+      con
       let r=''
       if (playerM==='stone')
       {
