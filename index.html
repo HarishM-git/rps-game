@@ -7,8 +7,20 @@
   <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
+  <div class="scores_in">
+    <p class="js-score"></p>
+    <br>
+  </div>
+  <div class="scores_in">
+    <p class="js-move"></p>
+    <br>
+  </div>
+  <div class="scores_in">
+    <p class="js-result"></p>
+    <br>
+  </div>
   <div class="flex">
-
+      
       <div class="b1">
       <img src="stone.png" alt="this img is about stone"
       onclick="
@@ -29,12 +41,15 @@
         ">
 
       </div>
+      
+      
       <div class="b4">
       <button onclick="
         score.wins=0;
         score.loses=0;
         score.ties=0;
         localStorage.removeItem('score');
+        SCORE();
         alert('YOUR SCORE HAS BEEN RESETED')">
         Reset score</button>
       
@@ -49,7 +64,13 @@
       ties:0,
     };
 
+    let playerM=''
+
+    SCORE();
+    
+
     function result(playerM){
+
       const c=cmove();
       let r=''
       if (playerM==='stone')
@@ -115,9 +136,24 @@
 
     localStorage.setItem('score',JSON.stringify(score));
 
+    SCORE();
+
+    document.querySelector('.js-move')
+      .innerHTML=`YOUR MOVE:${playerM} VS  ${c}:COMPUTER MOVE`;
+      
+
+    document.querySelector('.js-result')
+      .innerHTML=r;
+
+
     alert(`computer selected ${c} and you selected ${playerM} .${r}
 WINS : ${score.wins}          LOSES : ${score.loses}          TIE : ${score.ties}`);
   }
+  
+    function SCORE(){
+      document.querySelector('.js-score')
+      .innerHTML = `WINS : ${score.wins}          LOSES : ${score.loses}          TIE : ${score.ties}`;
+    }
     
     
   
