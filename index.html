@@ -50,6 +50,12 @@
         score.ties=0;
         localStorage.removeItem('score');
         SCORE();
+        document.querySelector('.js-move')
+        .innerHTML=`CHECK YOUR LUCK`;
+        document.querySelector('.js-result')
+      .innerHTML='-------';
+
+
         alert('YOUR SCORE HAS BEEN RESETED')">
         Reset score</button>
       
@@ -129,6 +135,7 @@
     }
     else if(r==='YOU LOSE'){
       score.loses+=1;
+      
     }
     else if(r==='TIE'){
       score.ties+=1;
@@ -139,15 +146,12 @@
     SCORE();
 
     document.querySelector('.js-move')
-      .innerHTML=`YOUR MOVE:${playerM} VS  ${c}:COMPUTER MOVE`;
+      .innerHTML=`YOUR MOVE:  ${playerM}  VS  ${c}  :COMPUTER MOVE`;
       
 
     document.querySelector('.js-result')
       .innerHTML=r;
-
-
-    alert(`computer selected ${c} and you selected ${playerM} .${r}
-WINS : ${score.wins}          LOSES : ${score.loses}          TIE : ${score.ties}`);
+    
   }
   
     function SCORE(){
