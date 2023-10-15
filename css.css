@@ -36,7 +36,7 @@ body{
 }
 
 
-@media screen and (max-width:360px)
+@media screen and (max-width:370px)
 {
   .reset{
     text-align: center;
@@ -47,4 +47,15 @@ body{
     font-weight: bolder;
 
 }
+}
+@media screen and (min-width:400px)
+{
+  button{
+    font-size: x-large;
+    border-radius: 35px;
+    padding:25px; 
+    font-weight: bolder;
+    border:none;
+    color:blue;
+  }
 }
