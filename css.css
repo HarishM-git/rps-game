@@ -1,3 +1,4 @@
+
 .flex{
   
   display:flex;
@@ -27,6 +28,7 @@ body{
 }
 .b1{
   cursor: pointer;
+
 }
 .b2{
   cursor: pointer;
@@ -51,7 +53,7 @@ body{
 @media screen and (min-width:371px)
 {
   button{
-    margin-left: 510px;
+    margin-left: 500px;
     font-size: x-large;
     border-radius: 35px;
     padding:15px; 
