@@ -1,12 +1,3 @@
-button{
-  font-size: x-large;
-  border-radius: 35px;
-  padding:15px; 
-  font-weight: bolder;
-  border:none;
-  margin-left:505px
-  
-}
 .flex{
   
   display:flex;
@@ -40,7 +31,7 @@ body{
 {
   .reset{
     text-align: center;
-    margin-left:95px;
+    margin-left:115px;
     margin-bottom:15px;
     padding:10px;
     border-radius: 30px;
@@ -51,9 +42,10 @@ body{
 @media screen and (min-width:400px)
 {
   button{
+    margin-left: 500px;
     font-size: x-large;
     border-radius: 35px;
-    padding:25px; 
+    padding:15px; 
     font-weight: bolder;
     border:none;
     color:blue;
