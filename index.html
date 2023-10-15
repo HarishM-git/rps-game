@@ -10,7 +10,22 @@
   <div class="scores_in">
     <p class="js-score"></p>
     <br>
+   
   </div>
+  <button  class="reset" onclick="
+        score.wins=0;
+        score.loses=0;
+        score.ties=0;
+        localStorage.removeItem('score');
+        SCORE();
+        document.querySelector('.js-move')
+        .innerHTML=`CHECK YOUR LUCK`;
+        document.querySelector('.js-result')
+      .innerHTML='-------';
+
+
+        alert('YOUR SCORE HAS BEEN RESETED')">
+        Reset score</button>
   <div class="scores_in">
     <p class="js-move"></p>
     <br>
@@ -41,27 +56,15 @@
         ">
 
       </div>
+  </div>
       
       
-      <div class="b4">
-      <button onclick="
-        score.wins=0;
-        score.loses=0;
-        score.ties=0;
-        localStorage.removeItem('score');
-        SCORE();
-        document.querySelector('.js-move')
-        .innerHTML=`CHECK YOUR LUCK`;
-        document.querySelector('.js-result')
-      .innerHTML='-------';
+      
+      
+      
 
+      
 
-        alert('YOUR SCORE HAS BEEN RESETED')">
-        Reset score</button>
-      
-      </div>
-      
-</div>
   
   <script>
     let score=JSON.parse(localStorage.getItem('score')) || {

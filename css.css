@@ -1,9 +1,11 @@
 button{
   font-size: x-large;
   border-radius: 35px;
-  padding:25px; 
-  margin-top: 70px;
+  padding:15px; 
   font-weight: bolder;
+  border:none;
+  margin-left:505px
+  
 }
 .flex{
   
@@ -33,3 +35,16 @@ body{
   color: aliceblue;
 }
 
+
+@media screen and (max-width:350px)
+{
+  .reset{
+    text-align: center;
+    margin-left:95px;
+    margin-bottom:15px;
+    padding:10px;
+    border-radius: 30px;
+    font-weight: bolder;
+
+}
+}
