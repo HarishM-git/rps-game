@@ -39,10 +39,10 @@ body{
 
 }
 }
-@media screen and (min-width:400px)
+@media screen and (min-width:371px)
 {
   button{
-    margin-left: 500px;
+    margin-left: 510px;
     font-size: x-large;
     border-radius: 35px;
     padding:15px; 
