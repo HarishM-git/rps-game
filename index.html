@@ -57,15 +57,6 @@
 
       </div>
   </div>
-      
-      
-      
-      
-      
-
-      
-
-  
   <script>
     let score=JSON.parse(localStorage.getItem('score')) || {
       wins:0,
@@ -73,9 +64,11 @@
       ties:0,
     };
 
-    let playerM=''
+    document.querySelector('.js-move').innerHTML=JSON.parse(localStorage.getItem('on'));
+    document.querySelector('.js-result').innerHTML=JSON.parse(localStorage.getItem('one'));
 
     SCORE();
+
     
 
     function result(playerM){
@@ -143,23 +136,27 @@
     else if(r==='TIE'){
       score.ties+=1;
     }
+    let ha=document.querySelector('.js-move')
+      .innerHTML=`YOUR MOVE:  ${playerM}  VS  ${c}  :COMPUTER MOVE`;
+    
+    let ui=document.querySelector('.js-result')
+    .innerHTML=r;
 
+    localStorage.setItem('one',JSON.stringify(ui));
     localStorage.setItem('score',JSON.stringify(score));
+    localStorage.setItem('on',JSON.stringify(ha));
+
 
     SCORE();
-
-    document.querySelector('.js-move')
-      .innerHTML=`YOUR MOVE:  ${playerM}  VS  ${c}  :COMPUTER MOVE`;
-      
-
-    document.querySelector('.js-result')
-      .innerHTML=r;
     
   }
   
     function SCORE(){
       document.querySelector('.js-score')
       .innerHTML = `WINS : ${score.wins}          LOSES : ${score.loses}          TIE : ${score.ties}`;
+    }
+    function ons(){
+
     }
     
     
