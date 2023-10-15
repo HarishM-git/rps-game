@@ -37,21 +37,21 @@
   <div class="flex">
       
       <div class="b1">
-      <img src="stone.png" alt="this img is about stone"
+      <img src="images/stone1.png" alt="this img is about stone"
       onclick="
         result('stone');
         ">
       
       </div>
       <div class="b2">
-      <img src="paper.png" alt="this img is about paper"
+      <img src="images/paper1.png" alt="this img is about paper"
       onclick="
         result('paper');
         ">
       
       </div>
       <div class="b3">
-      <img src="scissor.png" alt="this img is about scissor" onclick="
+      <img src="images/scissor1.png" alt="this img is about scissor" onclick="
         result('scissor');
         ">
 
@@ -136,8 +136,9 @@
     else if(r==='TIE'){
       score.ties+=1;
     }
+  
     let ha=document.querySelector('.js-move')
-      .innerHTML=`YOUR MOVE:  ${playerM}  VS  ${c}  :COMPUTER MOVE`;
+      .innerHTML=`YOUR MOVE:<img  src="images/${playerM}.png"> VS <img src="images/${c}.png">  :COMPUTER MOVE`;
     
     let ui=document.querySelector('.js-result')
     .innerHTML=r;

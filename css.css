@@ -25,7 +25,15 @@ body{
   text-align: center;
   color: aliceblue;
 }
-
+.b1{
+  cursor: pointer;
+}
+.b2{
+  cursor: pointer;
+}
+.b3{
+  cursor: pointer;
+}
 
 @media screen and (max-width:370px)
 {
