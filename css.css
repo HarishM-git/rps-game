@@ -36,32 +36,17 @@ body{
 .b3{
   cursor: pointer;
 }
-
-@media screen and (max-width:370px)
-{
-  .reset{
-    align-self:center;
-    text-align: center;
-    margin-left:115px;
-    margin-bottom:15px;
-    padding:10px;
-    border-radius: 30px;
-    font-weight: bolder;
-    cursor: pointer;
-
+.button{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 18px;
+  
 }
-}
-@media screen and (min-width:371px)
-{
-  .reset{
-    align-self:center;
-    margin-left: 650px;
-    font-size: x-large;
-    border-radius: 35px;
-    padding:15px; 
-    font-weight: bolder;
-    border:none;
-    color:blue;
-    cursor: pointer;
-  }
+button{
+  padding:10px;
+  border-radius:25px;
+  font-weight: bolder;
+  font-size: large;
+  border:solid blue;
 }
