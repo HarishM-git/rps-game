@@ -53,7 +53,7 @@ body{
 }
 @media screen and (min-width:371px)
 {
-  button{
+  .reset{
     align-self:center;
     margin-left: 650px;
     font-size: x-large;
