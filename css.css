@@ -40,6 +40,7 @@ body{
 @media screen and (max-width:370px)
 {
   .reset{
+    align-self:center;
     text-align: center;
     margin-left:115px;
     margin-bottom:15px;
@@ -53,6 +54,7 @@ body{
 @media screen and (min-width:371px)
 {
   button{
+    align-self:center;
     margin-left: 650px;
     font-size: x-large;
     border-radius: 35px;
