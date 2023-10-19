@@ -41,6 +41,7 @@ body{
   justify-content: center;
   align-items: center;
   padding-bottom: 18px;
+  cursor: pointer;
   
 }
 button{
