@@ -26,17 +26,7 @@ body{
   text-align: center;
   color: aliceblue;
 }
-.b1{
-  cursor: pointer;
-
-}
-.b2{
-  cursor: pointer;
-}
-.b3{
-  cursor: pointer;
-}
-.button{
+.harish{
   display:flex;
   justify-content: center;
   align-items: center;
@@ -44,10 +34,17 @@ body{
   cursor: pointer;
   
 }
-button{
+.reset{
+  cursor: pointer;
   padding:10px;
   border-radius:25px;
   font-weight: bolder;
   font-size: large;
   border:solid blue;
 }
+.hi{
+  cursor: pointer;
+  background-color: black;
+  border: none;
+}
+
